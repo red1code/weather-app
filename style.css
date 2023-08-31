@@ -1,0 +1,178 @@
+:root {
+	--gap: 20px;
+	--main-color: whitesmoke;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	min-width: 340px;
+	min-height: 100dvh;
+	background-image: url(assets/weather-main-background.webp);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+}
+
+header,
+main,
+footer {
+	padding: var(--gap);
+}
+
+form {
+	width: max-content;
+	max-width: 100%;
+	margin-inline: auto;
+	display: flex;
+	gap: 1px;
+}
+
+input {
+	width: 100%;
+	padding: calc(var(--gap) / 1.5) var(--gap);
+	font-size: 1rem;
+	background-color: var(--main-color);
+	opacity: 0.5;
+	border: none;
+	border-radius: 50px 0 0 50px;
+}
+
+input:focus,
+input:hover {
+	outline: none;
+	opacity: 0.75;
+}
+
+button[type='submit'] {
+	padding: calc(var(--gap) / 1.5) var(--gap);
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+	border-radius: 0 50px 50px 0;
+	cursor: pointer;
+}
+
+button[type='submit']:focus,
+button[type='submit']:hover {
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+main {
+	flex: 1;
+	display: flex;
+}
+
+.container {
+	padding: var(--gap);
+	align-self: center;
+	margin-inline: auto;
+	width: 750px;
+	max-width: 100%;
+	background-color: rgba(255, 255, 255, 0.55);
+	border-radius: 25px;
+}
+
+#location {
+	padding: var(--gap);
+	font-size: xx-large;
+	text-align: center;
+}
+
+.details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.temperature {
+	padding: var(--gap);
+	font-size: 7rem;
+	font-weight: bold;
+}
+
+.temperature sup {
+	font-size: 3rem;
+	margin-left: -20px;
+}
+
+#otherDetails {
+	padding: var(--gap);
+	flex: 1;
+	padding-left: var(--gap);
+	line-height: 2;
+	border-left: 1px solid #fff;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/*
+** animation
+*/
+
+#animation {
+	padding: calc(var(--gap) * 2) var(--gap);
+}
+
+.arc:before {
+	margin-inline: auto;
+	-webkit-animation: spin 0.5s infinite linear;
+	animation: spin 0.5s infinite linear;
+	border-radius: 100%;
+	border-top: 6px solid var(--primary, #000);
+	content: '';
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+
+@-webkit-keyframes spin {
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/*
+** responsive (mobile)
+*/
+
+@media screen and (max-width: 675px) {
+	.details {
+		display: block;
+	}
+
+	.temperature {
+		padding: var(--gap);
+		font-size: 4rem;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.temperature sup {
+		font-size: 1.2rem;
+		margin-left: -10px;
+	}
+
+	#otherDetails {
+		justify-content: center;
+		border-left: none;
+		border-top: 1px solid #fff;
+	}
+}

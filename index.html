@@ -3,13 +3,36 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="assets/weather-icon.png" type="image/x-icon" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js" defer></script>
 		<title>Weather App</title>
 	</head>
 	<body>
-		<hrader></hrader>
-		<main></main>
+		<header>
+			<form>
+				<input type="text" name="city" id="city" placeholder="Search city" required />
+				<button type="submit">Search</button>
+			</form>
+		</header>
+
+		<main>
+			<div class="container" id="container">
+				<div class="innerContainer" id="innerContainer">
+					<div class="location" id="location"></div>
+					<div class="details">
+						<div class="temperature">
+							<span id="temperature"></span>
+							<sup>&#8451;</sup>
+						</div>
+						<div class="other-details" id="otherDetails"></div>
+					</div>
+				</div>
+
+				<div class="arc" id="animation"></div>
+			</div>
+		</main>
+
 		<footer></footer>
 	</body>
 </html>
