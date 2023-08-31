@@ -1,3 +1,5 @@
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 const container = document.getElementById('container');
 const innerContainer = document.getElementById('innerContainer');
 const animation = document.getElementById('animation');

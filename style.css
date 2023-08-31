@@ -10,6 +10,11 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 body {
 	min-width: 340px;
 	min-height: 100dvh;
@@ -147,6 +152,27 @@ main {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+}
+
+/*
+** footer
+*/
+
+footer {
+	background-color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.9rem;
+}
+
+.red1dev-link {
+	font-style: italic;
+}
+
+.red1dev-link:hover,
+.red1dev-link:focus {
+	color: darkgreen;
 }
 
 /*
