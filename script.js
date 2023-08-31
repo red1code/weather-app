@@ -54,13 +54,13 @@ function displayBox(status = 'initApp') {
 
 async function getWeatherData(cityName) {
 	const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
-  const response = await fetch(apiURL, { mode: 'cors' });
+  const response = await fetch(apiURL, { mode: 'cors', referrerPolicy: 'unsafe-url' });
   return response.json();
 }
 
 async function getGeocoding(cityName) {
   const apiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`;
-  const response = await fetch(apiURL, { mode: 'cors' });
+  const response = await fetch(apiURL, { mode: 'cors', referrerPolicy: 'unsafe-url' });
   return response.json();
 }
 
